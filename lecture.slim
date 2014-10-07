@@ -459,13 +459,14 @@ section
     '
       unless response.redirect?
         process response.body
+      # There is no such thing as unlessif :)
       else
         follow response['location']
       end
 
 section
   h2 Unless
-  p Is a modifier expression
+  p Is an expression modifier
   pre: code.ruby
     '
       eat unless hungry?
@@ -475,3 +476,35 @@ section.center data-background="#000"
 
 section.center data-background="#000"
   h2.white Use with caution
+
+section
+  h2 While
+  p Iterates while a condition is truthy
+  pre: code.ruby
+    '
+      while hungry?
+        eat
+      end
+
+section
+  h2 While
+  p Is an expression modifier
+  pre: code.ruby
+    '
+      eat while hungry?
+
+section
+  h2 Until
+  p Iterates while a condition is falsy
+  pre: code.ruby
+    '
+      untill full?
+        eat
+      end
+
+section
+  h2 Until
+  p Is an expression modifier
+  pre: code.ruby
+    '
+      eat until full?

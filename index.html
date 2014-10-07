@@ -605,6 +605,7 @@ end </code></pre>
   </p>
   <pre><code class="ruby">unless response.redirect?
   process response.body
+# There is no such thing as unlessif :)
 else
   follow response['location']
 end </code></pre>
@@ -614,7 +615,7 @@ end </code></pre>
     Unless
   </h2>
   <p>
-    Is a modifier expression
+    Is an expression modifier
   </p>
   <pre><code class="ruby">eat unless hungry? </code></pre>
 </section>
@@ -627,6 +628,46 @@ end </code></pre>
   <h2 class="white">
     Use with caution
   </h2>
+</section>
+<section>
+  <h2>
+    While
+  </h2>
+  <p>
+    Iterates while a condition is truthy
+  </p>
+  <pre><code class="ruby">while hungry?
+  eat
+end </code></pre>
+</section>
+<section>
+  <h2>
+    While
+  </h2>
+  <p>
+    Is an expression modifier
+  </p>
+  <pre><code class="ruby">eat while hungry? </code></pre>
+</section>
+<section>
+  <h2>
+    Until
+  </h2>
+  <p>
+    Iterates while a condition is falsy
+  </p>
+  <pre><code class="ruby">untill full?
+  eat
+end </code></pre>
+</section>
+<section>
+  <h2>
+    Until
+  </h2>
+  <p>
+    Is an expression modifier
+  </p>
+  <pre><code class="ruby">eat until full? </code></pre>
 </section>
       </div>
     </div>
