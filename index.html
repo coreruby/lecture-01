@@ -511,6 +511,123 @@ Y       <=> == === != =~ !~
 >> nil && 42
 => nil </code></pre>
 </section>
+<section>
+  <h2>
+    If
+  </h2>
+  <p>
+    The if statement executes a block of code if its condition is truthy
+  </p>
+  <pre><code class="ruby">if bear.hungry?
+  bear.eat
+elsif bear.thirsty?
+  bear.drink
+else
+  bear.dance
+end </code></pre>
+</section>
+<section>
+  <h2>
+    If
+  </h2>
+  <p>
+    The last executed code in an if statement is its return value
+  </p>
+  <pre><code class="ruby">consequence = if bear.hungry?
+                bear.eat
+              elsif bear.thirsty?
+                bear.drink
+              else
+                bear.dance
+              end </code></pre>
+</section>
+<section>
+  <h2>
+    If
+  </h2>
+  <p>
+    Its actually an expression
+  </p>
+  <pre><code class="ruby">consequence = if bear.hungry?
+                bear.eat
+              elsif bear.thirsty?
+                bear.drink
+              else
+                bear.dance
+              end </code></pre>
+</section>
+<section>
+  <h2>
+    If
+  </h2>
+  <p>
+    It returns nil if no condition matches
+  </p>
+  <pre><code class="ruby">this_can_be_nil = if bear.hungry?
+                    bear.eat
+                  elsif bear.thirsty?
+                    bear.drink
+                  end </code></pre>
+</section>
+<section class="center" data-background="#000">
+  <h2 class="white">
+    Everything is an expression in Ruby
+  </h2>
+</section>
+<section>
+  <h2>
+    Postfix If
+  </h2>
+  <p>
+    You can use if as an expression modifier
+  </p>
+  <pre><code class="ruby">sleep if tired? </code></pre>
+</section>
+<section>
+  <h2>
+    Unless
+  </h2>
+  <p>
+    The unless statement executes a block of code if its condition is falsy
+  </p>
+  <pre><code class="ruby">unless response.redirect?
+  process response.body
+else
+  follow response['location']
+end </code></pre>
+</section>
+<section>
+  <h2>
+    Unless
+  </h2>
+  <p>
+    There is no elsif clause
+  </p>
+  <pre><code class="ruby">unless response.redirect?
+  process response.body
+else
+  follow response['location']
+end </code></pre>
+</section>
+<section>
+  <h2>
+    Unless
+  </h2>
+  <p>
+    Is a modifier expression
+  </p>
+  <pre><code class="ruby">eat unless hungry? </code></pre>
+</section>
+<section class="center" data-background="#000">
+  <h2 class="white">
+    Unless else is hard to process, mentally
+  </h2>
+</section>
+<section class="center" data-background="#000">
+  <h2 class="white">
+    Use with caution
+  </h2>
+</section>
       </div>
     </div>
     <script src="js/head.min.js"></script>

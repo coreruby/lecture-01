@@ -379,3 +379,99 @@ section
       => 42
       >> nil && 42
       => nil
+
+section
+  h2 If
+  p The if statement executes a block of code if its condition is truthy
+  pre: code.ruby
+    '
+      if bear.hungry?
+        bear.eat
+      elsif bear.thirsty?
+        bear.drink
+      else
+        bear.dance
+      end
+
+section
+  h2 If
+  p The last executed code in an if statement is its return value
+  pre: code.ruby
+    '
+      consequence = if bear.hungry?
+                      bear.eat
+                    elsif bear.thirsty?
+                      bear.drink
+                    else
+                      bear.dance
+                    end
+
+section
+  h2 If
+  p Its actually an expression
+  pre: code.ruby
+    '
+      consequence = if bear.hungry?
+                      bear.eat
+                    elsif bear.thirsty?
+                      bear.drink
+                    else
+                      bear.dance
+                    end
+
+section
+  h2 If
+  p It returns nil if no condition matches
+  pre: code.ruby
+    '
+      this_can_be_nil = if bear.hungry?
+                          bear.eat
+                        elsif bear.thirsty?
+                          bear.drink
+                        end
+
+
+section.center data-background="#000"
+  h2.white Everything is an expression in Ruby
+
+section
+  h2 Postfix If
+  p You can use if as an expression modifier
+  pre: code.ruby
+    '
+      sleep if tired?
+
+section
+  h2 Unless
+  p The unless statement executes a block of code if its condition is falsy
+  pre: code.ruby
+    '
+      unless response.redirect?
+        process response.body
+      else
+        follow response['location']
+      end
+
+section
+  h2 Unless
+  p There is no elsif clause
+  pre: code.ruby
+    '
+      unless response.redirect?
+        process response.body
+      else
+        follow response['location']
+      end
+
+section
+  h2 Unless
+  p Is a modifier expression
+  pre: code.ruby
+    '
+      eat unless hungry?
+
+section.center data-background="#000"
+  h2.white Unless else is hard to process, mentally
+
+section.center data-background="#000"
+  h2.white Use with caution
