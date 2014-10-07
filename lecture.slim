@@ -241,7 +241,7 @@ section.center data-background="#000"
 
 section
   h2 TrueClass
-  p The "formal" truth
+  p The boolean truth
   pre: code.ruby
     '
       'He said "Hello, mister"...'
@@ -249,7 +249,7 @@ section
 
 section
   h2 String
-  p They can be written with single and double quotes
+  p Can be written with single and double quotes
   pre: code.ruby
     '
       'He said "Hello, mister"...'
@@ -289,7 +289,17 @@ section
 
 section
   h2 Symbols
-  p They are interned, meaning they always yield the same object
+  p Interned, meaning they always yield the same object
+  pre: code.ruby
+    '
+      >> :chunky.object_id == :chunky.object_id
+      => true
+      >> "chunky".object_id == "chunky".object_id
+      => false
+
+section
+  h2 Symbols
+  p Memory leaks, once defined they are never garbage collected
   pre: code.ruby
     '
       >> :chunky.object_id == :chunky.object_id
@@ -372,7 +382,7 @@ section
 
 section
   h2 Operators
-  p They don't return a strict Boolean
+  p Operators don't return a strict Boolean
   pre: code.ruby
     '
       >> nil || 42

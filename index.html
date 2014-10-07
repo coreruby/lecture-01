@@ -339,7 +339,7 @@ alias     class  elsif     if      not     return  undef  yield </code></pre>
     TrueClass
   </h2>
   <p>
-    The "formal" truth
+    The boolean truth
   </p>
   <pre><code class="ruby">'He said "Hello, mister"...'
 "He said, \"There are miltiline\nstrings\"..." </code></pre>
@@ -349,7 +349,7 @@ alias     class  elsif     if      not     return  undef  yield </code></pre>
     String
   </h2>
   <p>
-    They can be written with single and double quotes
+    Can be written with single and double quotes
   </p>
   <pre><code class="ruby">'He said "Hello, mister"...'
 "He said, \"There are miltiline\nstrings\"..." </code></pre>
@@ -397,7 +397,19 @@ alias     class  elsif     if      not     return  undef  yield </code></pre>
     Symbols
   </h2>
   <p>
-    They are interned, meaning they always yield the same object
+    Interned, meaning they always yield the same object
+  </p>
+  <pre><code class="ruby">>> :chunky.object_id == :chunky.object_id
+=> true
+>> "chunky".object_id == "chunky".object_id
+=> false </code></pre>
+</section>
+<section>
+  <h2>
+    Symbols
+  </h2>
+  <p>
+    Memory leaks, once defined they are never garbage collected
   </p>
   <pre><code class="ruby">>> :chunky.object_id == :chunky.object_id
 => true
@@ -504,7 +516,7 @@ Y       <=> == === != =~ !~
     Operators
   </h2>
   <p>
-    They don't return a strict Boolean
+    Operators don't return a strict Boolean
   </p>
   <pre><code class="ruby">>> nil || 42
 => 42
