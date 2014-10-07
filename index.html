@@ -432,10 +432,10 @@ alias     class  elsif     if      not     return  undef  yield </code></pre>
   </h2>
   <ul>
     <li>
-      There is no Boolean class in Ruby
+      There is no strict Boolean class in Ruby
     </li>
     <li>
-      The formal truth is represented by true
+      The formal truth is represented by true, the single instance of TrueClass
     </li>
   </ul>
   <pre><code class="ruby">>> true.class.ancestors
@@ -447,10 +447,10 @@ alias     class  elsif     if      not     return  undef  yield </code></pre>
   </h2>
   <ul>
     <li>
-      There is no Boolean class in Ruby
+      There is no strict Boolean class in Ruby
     </li>
     <li>
-      The formal lie is represented by true
+      The formal lie is represented by false, the single instance of FalseClass
     </li>
   </ul>
   <pre><code class="ruby">>> false.class.ancestors
@@ -504,14 +504,14 @@ Y       <=> == === != =~ !~
   <h2>
     Operators
   </h2>
-  <ul>
-    <li>
-      They won't return strict true or false
-    </li>
-    <li>
-      Rather the last truthy of falsy value
-    </li>
-  </ul>
+  <p>
+    They don't return a a strict Boolean
+  </p>
+  <pre><code class="ruby">>> nil || 42
+=> 42
+>> nil && 42
+=> nil
+>> </code></pre>
 </section>
       </div>
     </div>

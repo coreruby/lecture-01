@@ -314,8 +314,8 @@ section
 section
   h2 TrueClass
   ul
-    li There is no Boolean class in Ruby
-    li The formal truth is represented by true
+    li There is no strict Boolean class in Ruby
+    li The formal truth is represented by true, the single instance of TrueClass
   pre: code.ruby
     '
       >> true.class.ancestors
@@ -324,8 +324,8 @@ section
 section
   h2 FalseClass
   ul
-    li There is no Boolean class in Ruby
-    li The formal lie is represented by true
+    li There is no strict Boolean class in Ruby
+    li The formal lie is represented by false, the single instance of FalseClass
   pre: code.ruby
     '
       >> false.class.ancestors
@@ -373,6 +373,11 @@ section
 
 section
   h2 Operators
-  ul
-    li They won't return strict true or false
-    li Rather the last truthy of falsy value
+  p They don't return a a strict Boolean
+  pre: code.ruby
+    '
+      >> nil || 42
+      => 42
+      >> nil && 42
+      => nil
+      >>
