@@ -658,6 +658,126 @@ end </code></pre>
 </section>
 <section>
   <h2>
+    Case
+  </h2>
+  <p>
+    A multiway if on steroids
+  </p>
+  <pre><code class="ruby">case year
+when 1850..1889
+  :blues
+when 1890..1909
+  :ragtime
+when 1910..1929
+  :new_orlean_jazz
+when 1930..1939
+  :swing
+when 1940..1950
+  :bebop
+else
+  :jazz
+end </code></pre>
+</section>
+<section>
+  <h2>
+    Case
+  </h2>
+  <p>
+    A multiway if on steroids
+  </p>
+  <pre><code class="ruby">case year
+when 1850..1889 then :blues
+when 1890..1909 then :ragtime
+when 1910..1929 then :new_orlean_jazz
+when 1930..1939 then :swing
+when 1940..1950 then :bebop
+else                 :jazz
+end </code></pre>
+</section>
+<section>
+  <h2>
+    Case
+  </h2>
+  <p>
+    A multiway if on steroids
+  </p>
+  <pre><code class="ruby">genre = case year
+        when 1850..1889 then :blues
+        when 1890..1909 then :ragtime
+        when 1910..1929 then :new_orlean_jazz
+        when 1930..1939 then :swing
+        when 1940..1950 then :bebop
+        else                 :jazz
+        end </code></pre>
+</section>
+<section>
+  <h2>
+    Case
+  </h2>
+  <p>
+    The case condition can be skipped
+  </p>
+  <pre><code class="ruby">case
+when (1850..1889) === year
+  :blues
+when (1890..1909) === year
+  :ragtime
+when (1910..1929) === year
+  :new_orlean_jazz
+when (1930..1939) ==== year
+  :swing
+when (1940..1950) === year
+  :bebop
+else
+  :jazz
+end </code></pre>
+</section>
+<section>
+  <h2>
+    Case
+  </h2>
+  <p>
+    It will become true, implicitly
+  </p>
+  <pre><code class="ruby">case true
+when (1850..1889) === year
+  :blues
+when (1890..1909) === year
+  :ragtime
+when (1910..1929) === year
+  :new_orlean_jazz
+when (1930..1939) ==== year
+  :swing
+when (1940..1950) === year
+  :bebop
+else
+  :jazz
+end </code></pre>
+</section>
+<section>
+  <h2>
+    Case
+  </h2>
+  <p>
+    Objects responding to #=== can be used in when
+  </p>
+  <pre><code class="ruby">case
+when (1850..1889) === year
+  :blues
+when (1890..1909) === year
+  :ragtime
+when (1910..1929) === year
+  :new_orlean_jazz
+when (1930..1939) ==== year
+  :swing
+when (1940..1950) === year
+  :bebop
+else
+  :jazz
+end </code></pre>
+</section>
+<section>
+  <h2>
     While
   </h2>
   <p>
