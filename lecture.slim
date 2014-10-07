@@ -518,3 +518,31 @@ section
   pre: code.ruby
     '
       eat until full?
+
+section
+  h2 For
+  p Don't use for in Ruby
+  pre: code.ruby
+    '
+      for color in spectrum
+        color.inverse
+      end
+
+section
+  h2 For
+  p An anti-pattern
+  pre: code.ruby
+    '
+      for color in spectrum
+        color.inverse
+      end
+
+section
+  h2 For
+  p Calls #each under the hood
+  pre: code.ruby
+    '
+      >> for letter in "abcdefg..."
+      >>   say letter
+      >> end
+      NoMethodError: undefined method `each' for "abcdefg...":String

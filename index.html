@@ -681,6 +681,40 @@ end </code></pre>
   </p>
   <pre><code class="ruby">eat until full? </code></pre>
 </section>
+<section>
+  <h2>
+    For
+  </h2>
+  <p>
+    Don't use for in Ruby
+  </p>
+  <pre><code class="ruby">for color in spectrum
+  color.inverse
+end </code></pre>
+</section>
+<section>
+  <h2>
+    For
+  </h2>
+  <p>
+    An anti-pattern
+  </p>
+  <pre><code class="ruby">for color in spectrum
+  color.inverse
+end </code></pre>
+</section>
+<section>
+  <h2>
+    For
+  </h2>
+  <p>
+    Calls #each under the hood
+  </p>
+  <pre><code class="ruby">>> for letter in "abcdefg..."
+>>   say letter
+>> end
+NoMethodError: undefined method `each' for "abcdefg...":String </code></pre>
+</section>
       </div>
     </div>
     <script src="js/head.min.js"></script>
